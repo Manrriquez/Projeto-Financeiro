@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+  background-color: #E0E0E0;
+  color: #333333;
+  font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    justify-content: space-around;
+    display: flex;
+}
+img {
+    margin-top: 15px;
+    width: 30px;
+    left: 22px;
+}
+
+.hamburguer-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0px;
+}
+.hamburguer-icon {
+    width: 0;
+    margin-top: 12px;
+}
+
+.menu-list ul {
+    display: none;
+    list-style-type: none;
+    font-size: 16px;
+    background-color: #333333;
+    color: white;
+    position: fixed;
+    height: 100%;
+    width: 75.4%;
+    right: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 20px 0px;
+  
+}
+.menu-icon:hover ul{
+    display: block;
+}
+.menu-list ul li:nth-child(1) {
+    text-align: left;
+}
+.menu-list ul li {
+    text-align: right;
+    margin: 7px 0;
+    padding: 0px 20px;
+}
+.menu-list ul li:hover {
+    background-color: #c4c4c4;
+    color: #333;
+    
+}
+.form {
+ margin-top: 20px;
+ margin-left: 5%;
+}
+.text {
+    font-size: 14px;
+    padding: 1%;
+}
+select {
+    width: 97%;
+    display: block;
+    height: 32px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    color: #888888;
+    padding-left: 10px;
+    font-size: 0.875rem;
+}
+input {
+    height: 25px;
+    border-radius: 4px;
+    width: 95%;
+    border: 1px solid #979797;
+}
+button {
+    width: 97%;
+    height: 27px;
+    background: #333333;
+    border: none;
+    color: #F6F6F6;
+    font-size: 0.875rem;
+    margin-top: 20px;
+}
+.btn {
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.bar {
+    padding-top: 10px;
+}
+.bar div {
+    width: 92%;
+    height: 1px;
+    background-color: #979797;
+    margin: 6px 15px;
+    margin-top: 20px;
+}
+.bar1 div {
+    width: 92%;
+    height: 1px;
+    background-color: #979797;
+    margin: 6px 15px;
+    margin-top: -6px;
+}
+.bar1 {
+    padding: 0px;
+}
+.bar2 div {
+    width: 92%;
+    height: 1px;
+    background-color: #979797;
+    margin: 6px 15px;
+    margin-top: -6px;
+}
+.bar2 {
+    padding: 0px;
+}
+.bar3 div {
+    width: 92%;
+    height: 1px;
+    background-color: #979797;
+    margin: 6px 15px;
+    margin-top: -6px;
+}
+.bar3 {
+    padding: 0px;
+}
+.bar4 div {
+    width: 92%;
+    height: 1px;
+    background-color: #979797;
+    margin: 9px 15px;
+    margin-top: -6px;
+}
+.bar4 {
+    padding: 0px;
+}
+.section-title h1 {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    padding-top: 24px;
+}
+.text-transactions {
+    margin-top: -20px;
+    padding-left: 16px;
+}
+.lado1 {
+   font-size: 16px;
+   display: inline-block;
+   margin-left: 40px;
+   
+}
+.lado2 {
+    font-size: 16px;
+    float: right;
+   margin-right: 80px;
+   
+}
+.lado3 {
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 38px;
+    margin-top: 0px;
+    
+ }
+ .lado4 {
+    font-size: 16px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 44px;
+    
+ }
+.goods {
+    margin-top: 20px;
+    display: inline-flex;
+    margin-left: 11px;
+}
+.values {
+    margin-right: 44px;
+    text-align: right;
+    float: right;
+    margin-top: -50px;
+}
+.text-transactions3 {
+    margin-top: -20px;
+    padding-left: 16px;
+}
+.goods3 {
+    margin-top: 24px;
+    display: inline-flex;
+    margin-left: 11px;
+}
+.values3 {
+    margin-right: 44px;
+    text-align: right;
+    float: right;
+    margin-top: -35px;
+}
+.text-transactions4 {
+    margin-top: -20px;
+    padding-left: 16px;
+}
+.text-transactions4 {
+    margin-top: -20px;
+    padding-left: 16px;
+}
+.goods4 {
+    margin-top: 24px;
+    display: inline-flex;
+    margin-left: 11px;
+}
+.values4 {
+    margin-right: 44px;
+    text-align: right;
+    float: right;
+    margin-top: -35px;
+}
+.lucro {
+    margin-top: -16px;
+    margin-right: 44px;
+    float: right;
+
+    font-size: 0.625rem;
+}
