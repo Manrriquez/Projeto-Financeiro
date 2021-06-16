@@ -29,6 +29,9 @@ img {
     width: 0;
     margin-top: 12px;
 }
+.menu-icon:hover ul {
+    display: block;
+}
 
 .menu-list ul {
     display: none;
@@ -44,9 +47,6 @@ img {
     margin: 0px;
     padding: 20px 0px;
   
-}
-.menu-icon:hover ul{
-    display: block;
 }
 .menu-list ul li:nth-child(1) {
     text-align: left;
