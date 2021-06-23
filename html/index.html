@@ -8,28 +8,29 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../Js/controll.js"></script>
 </head>
 
 <body>
     <div class="header">
        <div class="img">
-         <img src="../image/image.png" alt="logotipo">
+         <img src="../image/image.png" alt="logotipo">   <!-- Logotipo -->
        </div>
 
        <div class="title">
-           <p>Controle Financeiro</p>
+           <p>Controle Financeiro</p>                          <!-- Titulo -->
        </div>
        <div class="menu-icon">
            <div class="hamburguer-icon">
               <div></div>
-              <div></div>
+              <div></div>                          <!-- Menu Hamburguer -->
               <div></div>
            </div>
              <div class="menu-list">
                  <ul>
                      <li class="exit">X</li>
-                     <li>Cadastro de Transações</li>     
-                      <li>Limpar Dados</li>
+                     <li>Cadastro de Transações</li>       <!-- Primeiro menu options, apenas disponivel para versão mobile -->
+                      <li>Limpar Dados</li> 
                       <li>Salvar no Servidor</li>
                  </ul>
             </div>
@@ -39,8 +40,8 @@
           <ul>
               <li>Cadastro de Transações</li>
               <span class="bordas"></span>
-              <li>Limpar Dados</li>
-              <span class="bordas"></span>
+              <li>Limpar Dados</li>                  <!-- Segundo menu options, apenas disponivel para versão landscape e desktop -->
+              <span class="bordas"></span> 
               <li>Salvar no Servidor</li>
           </ul>
        </div>
@@ -50,14 +51,14 @@
    <div class="form">
        <div class="new">
             <h3>
-                Nova Transação
+                Nova Transação               <!-- Segundo titulo, apenas disponivel na versão tablet acima-->
             </h3>
        </div>
          <div class="transacao">
            <div class="text">
                Tipo de Transações
-           </div class= "options">
-             <select name="option">
+           </div class= "options">                   <!-- Opções de transação -->
+             <select name="option">                          
                  <option value="1">Compra</option>
                  <option value="2">Venda</option>
              </select>
@@ -65,67 +66,67 @@
 
        <div class="mercadoria">
           <div class="text">
-             Nome da Mercadoria
+             Nome da Mercadoria                  <!-- Nome de mercadorias -->
           </div>
           <input type="text" placeholder="input">
        </div>
 
        <div class="valores">
            <div class="text">
-               Valor
+               Valor                                     <!-- Valores da mercadoria-->
            </div>
            <input type="number" placeholder="R$0,00">
        </div>
 
        <div class="btn">
-          <button>Adicionar Transições</button>
+          <button>Adicionar Transições</button>           <!-- Botão -->
        </div>
    </div>
 
-   <div class="bar">
-       <div></div>
-   </div>
+   <div class="bar">        
+       <div></div>                             <!-- Barra feita separadamente -->
+   </div> 
 
-   <div class="transactions">
-        <div class="section-title">
-            <h1>Extrato de Transações</h1>
+   <div class="transactions">             
+        <div class="section-title">                      
+            <h1>Extrato de Transações</h1>             <!-- Titulo -->
         </div>
         <div>
             <h1 class="lado1">Mercadoria</h1>
-            <h1 class="lado2">Valor</h1>
+            <h1 class="lado2">Valor</h1>                    <!-- Mercadoria e valores -->
         </div>
-        <div class="bar1">
-            <div></div>
+        <div class="bar1"> 
+            <div></div>                               <!-- Segunda barra feita separadamente -->
         </div>
         <div class="text-transactions">
-          + <p class="goods">Lorem ipsum, dolor sit amet<br>
-                 consectetur</p>
-            <p class="values">R$:12,999,99</p>
+          + <p class="goods">Lorem ipsum, dolor sit amet <br>    <!-- Mercadoria -->
+                 consectetur </p>
+            <p class="values">R$:12,999,99</p>  <!-- Valor -->
         </div>
         <div class="bar2">
-            <div></div>
+            <div></div>                              <!-- Terceira barra feita separadamente -->
         </div>
         <div class="text-transactions3">
-          - <p class="goods3">Quis nostrud exercitation</p>
+          - <p class="goods3">Quis nostrud exercitation</p> <!-- Mercadoria-->
            
-           <p class="values3">R$ 99,99</p>
+           <p class="values3">R$ 99,99</p> <!-- Valor -->
         </div>
-        <div class="bar3">
-            <div></div>
+        <div class="bar3"> 
+            <div></div>                         <!-- Quarta barra feita separadamente-->
         </div>
         <div class="text-transactions4">
-           + <p class="goods4">Lorem ipsum</p>
-            <p class="values4">R$ 9,99</p>
+           + <p class="goods4">Lorem ipsum</p>          <!-- Mercadoria -->
+            <p class="values4">R$ 9,99</p>   <!-- Valor-->
         </div>
         <div class="bar4">
             <div></div>
-            <div></div>
+            <div></div>                                   <!-- Quinta barra feita separadamente-->
         </div>
         <div class="text-transactions5">
-            <h3 class="lado3">Total</h3>
-            <h3 class="lado4">R$ 12.909,99</h3>
+            <h3 class="lado3">Total</h3>    <!-- Total dos valores somados-->
+            <h3 class="lado4">R$ 12.909,99</h3>  <!-- valores somados -->
         </div>
-        <p class="lucro">[LUCRO]</p>
+        <p class="lucro">[LUCRO]</p>   
    </div>
    
 </body>
