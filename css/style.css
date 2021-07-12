@@ -1,409 +1,347 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .header {
-  background-color: #E0E0E0;
-  color: #333333;
-  font-size: 20px;
-    text-align: center;
-    font-weight: 600;
-    justify-content: space-around;
-    display: flex;
+background-color: #E0E0E0;
+color: #333333;
+font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  justify-content: space-around;
+  display: flex;
 }
 img {
-    margin-top: 15px;
-    width: 30px;
-    left: 22px;
+  margin-top: 15px;
+  width: 30px;
+  left: 22px;
 }
 .menu-icon {
-    margin-top: 13px;
+  margin-top: 13px;
 }
 .menu-itens {
-    display: none;
+  display: none;
 }
-.hamburguer-icon div {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 4px 0px;
-}
+
 .hamburguer-icon {
-    width: 0;
-    margin-top: 12px;
+  width: 0px;
+  margin-top: -7px;
 }
 
 .menu-list ul {
+  display: none;       
+  list-style-type: none;
+  font-size: 16px;
+  background-color: #333333;
+  color: white;                    /* Estilização do menu hamburguer */
+  position: fixed;                  
+  height: 100%;
+  width: 75.4%;
+  right: 0px;
+  top: 0px;
+  margin: 0px;
+  padding: 20px 0px;
+
+}
+.menu-icon:hover .menu-list ul{
+  display: block;                  /* Display block ao passar no menu hamburguer */
+}
+.menu-list ul li:nth-child(1) {
+  text-align: left;              /* "X" e jogado para o lado ao contrario das options, como forma de "exit */
+}
+.menu-list ul li {
+  text-align: right;
+  margin: 7px 0;
+  padding: 0px 20px;
+}
+.menu-list ul li:hover {
+  background-color: #c4c4c4;
+  color: #333;
+  
+}
+.form {
+margin-top: 20px;
+margin-left: 5%;
+}
+.new {
+  display: none;     /* Display none aplicado no segundo title, apenas disponivel apartir do modo tablet */
+}
+.transacao {
+  height: 68px;
+}
+.mercadoria {
+  height: 65px;
+}
+.text {
+  font-size: 14px;
+  padding: 1%;
+}
+.form .validacao {
+  color: #c50909;
+  font-weight: 250px;
+  margin-top: 0px;
+}
+select {
+  width: 97%;
+  display: block;
+  height: 32px;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  color: #888888;
+  padding-left: 10px;
+  font-size: 0.875rem;
+}
+input {
+  height: 25px;
+  border-radius: 4px;
+  width: 95%;
+  border: 1px solid #979797;
+}
+button {
+  width: 97%;
+  height: 27px;
+  background: #333333;
+  border: none;
+  color: #F6F6F6;
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
+.btn {
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.bar {
+  padding-top: 10px;        
+}
+.bar div {
+  width: 92%;
+  height: 1px;
+  background-color: #979797;        /* Barra feita separadamente */
+  margin: 6px 15px;
+  margin-top: 20px;
+}
+.container_table {
+  height: 100%;
+  margin: 0 0 30px 0;
+}
+
+.container_table p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 19px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.container_table table {
+  font-size: 0.875rem;
+  width: 96%;
+  padding-left: 2%;
+}
+
+.border {
+  border-bottom: 1px solid #979797;
+  padding: 0;
+}
+
+.border_bottom {
+  border-bottom: 1px solid #979797;
+  padding: 0;
+}
+th {
+  padding: 4px 0px;
+}
+
+.left {
+  text-align: start;
+  vertical-align: top;
+  width: 231px;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  text-align: end;
+  vertical-align: top;
+  padding-right: 15px;
+}
+
+.calc_symbol {
+  width: 0px;
+  padding: 0 10px 0 20px;
+  text-align: center;
+}
+
+.small {
+  font-size: 0.625rem;
+  padding-top: 0px;
+}
+
+.weight {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1111px){     /* Modo tablet portrait */
+
+  .form {
+    margin: 3% 3%;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.678) solid 0.1px;
+  }
+ .new {
+    display: block; 
+    text-align: center;           /* display block aplicado ao mudar as proporcões da tela */
+    font-size: 20px;
+  } 
+  select {
+     width: 20%;
+     height: 40px;
+  }
+  .transacao{
+      margin-top: 10px;
+      margin-left: 30px;
+  }
+  .mercadoria {
+      width: 61%;
+      margin-left: 25%;
+      margin-top: -67px;
+  }
+  input {
+      width: 83%;
+      height: 36px;
+  }
+  .valores {
+      width: 22%;
+      float: right;
+      margin-top: -61px;
+  }
+  .btn {
+      width: 26%;
+  padding-left: 72%;
+  /* margin: 13px; */
+  height: 81px;
+  }
+  button {
+      height: 40px;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+  
+}
+
+@media screen and (min-width: 1112px) {  /* versão tablet landscape e desktop */
+  .header {
+    background-color: #E0E0E0;
+    color: #333333;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    
+    display: flex;
+  }
+  .title {
+    margin-right: 55%;
+  }
+  #hamburguer-icon {
+    display: none;
+  }
+  .menu-icon .menu-list ul .exit {
+    display: none;
+  }
+  .menu-icon {
+      display: block;      
+  }
+  .menu-list ul {
     display: none;       
     list-style-type: none;
     font-size: 16px;
-    background-color: #333333;
+    background-color: #d6cece;
     color: white;                    /* Estilização do menu hamburguer */
     position: fixed;                  
-    height: 100%;
+    height: 1%;
     width: 75.4%;
     right: 0px;
     top: 0px;
     margin: 0px;
     padding: 20px 0px;
   
-}
-.menu-icon:hover .menu-list ul{
-    display: block;                  /* Display block ao passar no menu hamburguer */
- }
-.menu-list ul li:nth-child(1) {
-    text-align: left;              /* "X" e jogado para o lado ao contrario das options, como forma de "exit */
-}
-.menu-list ul li {
-    text-align: right;
-    margin: 7px 0;
-    padding: 0px 20px;
-}
-.menu-list ul li:hover {
-    background-color: #c4c4c4;
-    color: #333;
-    
-}
-.form {
- margin-top: 20px;
- margin-left: 5%;
-}
-.new {
-    display: none;     /* Display none aplicado no segundo title, apenas disponivel apartir do modo tablet */
-}
-.text {
-    font-size: 14px;
-    padding: 1%;
-}
-select {
-    width: 97%;
+  }
+  .menu-icon .menu-list ul {
     display: block;
-    height: 32px;
-    border: 1px solid #979797;
-    border-radius: 4px;
-    color: #888888;
-    padding-left: 10px;
-    font-size: 0.875rem;
-}
-input {
-    height: 25px;
-    border-radius: 4px;
-    width: 95%;
-    border: 1px solid #979797;
-}
-button {
-    width: 97%;
-    height: 27px;
-    background: #333333;
-    border: none;
-    color: #F6F6F6;
-    font-size: 0.875rem;
-    margin-top: 20px;
-}
-.btn {
-    border-radius: 4px;
-    margin-top: 20px;
-}
-.bar {
-    padding-top: 10px;        
-}
-.bar div {
-    width: 92%;
-    height: 1px;
-    background-color: #979797;        /* Barra feita separadamente */
-    margin: 6px 15px;
-    margin-top: 20px;
-}
-.bar1 div {
-    width: 92%;
-    height: 1px;
-    background-color: #979797;     /* Segunda barra feita separadamente */
-    margin: 6px 15px;
-    margin-top: -6px;
-}
-.bar1 {
-    padding: 0px;
-}
-.bar2 div {
-    width: 92%;
-    height: 1px;
-    background-color: #979797;       /* Terceira barra feita separadamente */
-    margin: 6px 15px;
-    margin-top: -6px;
-}
-.bar2 {
-    padding: 0px;
-}
-.bar3 div {
-    width: 92%;
-    height: 1px;
-    background-color: #979797;    /* Quarta barra feita separadamente */
-    margin: 6px 15px;
-    margin-top: -6px;
-}
-.bar3 {
-    padding: 0px;
-}
-.bar4 div {
-    width: 92%;
-    height: 1px;
-    background-color: #979797;    /* Quinta barra feita separadamente */
-    margin: 9px 15px;
-    margin-top: -6px;
-}
-.bar4 {
-    padding: 0px;
-}
-.section-title h1 {
-    text-align: center;
-    font-size: 18px;              /*Aplicando estilização no titulo do segundo container */
-    color: #000000;
-    padding-top: 24px;
-}
-.text-transactions {
-    margin-top: -20px;
-    padding-left: 16px;
-}
-.lado1 {
-   font-size: 16px;
-   display: inline-block;         /* Preços e valores separados com diferentes classes, temporariamente */
-   margin-left: 40px;
-   
-}
-.lado2 {
-    font-size: 16px;
-    float: right;
-   margin-right: 80px;
-   
-}
-.lado3 {
-    font-size: 16px;
+    background-color: #ffffff00;
+    color: black;
+  }
+  .menu-icon .menu-list .fundo_menu{
+    display: block;
     display: inline-block;
-    margin-left: 38px;
-    margin-top: 0px;
-    
- }
- .lado4 {
-    font-size: 16px;
-    float: right;
-    margin-top: 0px;
-    margin-right: 44px;
-    
- }
-.goods {
-    margin-top: 20px;
-    display: inline-flex;
-    margin-left: 11px;
-}
-.values {
-    margin-right: 44px;
-    text-align: right;
-    float: right;
-    margin-top: -50px;
-}
-.text-transactions3 {
-    margin-top: -20px;
-    padding-left: 16px;
-}
-.goods3 {
-    margin-top: 24px;
-    display: inline-flex;
-    margin-left: 11px;
-}
-.values3 {
-    margin-right: 44px;
-    text-align: right;
-    float: right;
-    margin-top: -35px;
-}
-.text-transactions4 {
-    margin-top: -20px;
-    padding-left: 16px;
-}
-.text-transactions4 {
-    margin-top: -20px;
-    padding-left: 16px;
-}
-.goods4 {
-    margin-top: 24px;
-    display: inline-flex;
-    margin-left: 11px;
-}
-.values4 {
-    margin-right: 44px;
-    text-align: right;
-    float: right;
-    margin-top: -35px;
-}
-.lucro {
-    margin-top: -16px;
-    margin-right: 44px;    /* Preços e valores separados em classes, temporariamente */
-    float: right;
-    font-size: 0.625rem;   
-}
-@media screen and (min-width: 768px) and (max-width: 1111px){     /* Modo tablet portrait */
-
-    .form {
+    background: #FFFFFF;
+    height: 16px;
+    margin: 7px;
+    width: 49%;
+    padding: 14px;
+    margin-top: 11px;
+    cursor: pointer;
+  }
+  .menu-icon ul {
+      list-style: none;
+      margin-top: 11px;
+      margin-right: -116px;
+    }
+  .menu-icon ul li {
+      display: inline;
+      font-size: 16px;
+      margin: 5px;
+  }
+  .bordas {
+      border-left: 1px solid #979797;
+      padding: 3px;
+  }
+  .form {
       margin: 3% 3%;
       border-radius: 5px;
       border: rgba(0, 0, 0, 0.678) solid 0.1px;
-    }
-   .new {
+      width: 45%;
+      margin-top: 3%;
+      padding-top: 8%;
+  
+  }
+  .new {
       display: block; 
-      text-align: center;           /* display block aplicado ao mudar as proporcões da tela */
-      font-size: 20px;
-    } 
-    select {
-       width: 20%;
-       height: 40px;
-    }
-    .transacao{
-        margin-top: 10px;
-        margin-left: 30px;
-    }
-    .mercadoria {
-        width: 61%;
-        margin-left: 25%;
-        margin-top: -67px;
-    }
-    input {
-        width: 83%;
-        height: 36px;
-    }
-    .valores {
-        width: 22%;
-        float: right;
-        margin-top: -61px;
-    }
-    .btn {
-        width: 26%;
-    padding-left: 72%;
-    /* margin: 13px; */
-    height: 81px;
-    }
-    button {
-        height: 40px;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-    .bar {
-        display: none;      /* barra divisora do formulario e transações aplicada com none */
-    }
-    .transactions {
-        margin-left: 17px;
-        margin-top: -10px;
-        margin-right: -35px;
-    }
-    .section-title h1 {
-        font-size: 25px;
-    }
-    .values {
-        margin-top: 30px;
-        margin-right: -40px;
-    }
-    .values3 {
-        margin-top: 25px;
-        margin-right: -93px
-    }
-    .values4 {
-        margin-top: 25px;
-        margin-right: 82px;
-    }
-    .lado4 {
-        margin-right: 80px;
-    }
-    .lucro {
-        margin-right: 80px;
-    }
-}
-
-@media screen and (min-width: 1112px) {  /* versão tablet landscape e desktop */
-    .menu-icon {
-        display: none;        /*display none aplicado, para não aparecer na versão landscape e desktop */
-    }
-    .menu-itens{
-        display: block;
-        display: inline-block;     /* segundo menu aplicado com block, feito para aparecer somente na versão landscape/desktop */
-        background: #FFFFFF;
-        height: 50px;
-        margin: 12px;
-        padding: -2px;
-        margin-top: 10px;
-    }
-    .menu-itens ul {
-        list-style: none;
-        margin-top: 11px;
-        margin-right: 20px;
-    }
-    .menu-itens ul li {
-        display: inline;
-        font-size: 16px;
-        margin: 5px;
-    }
-    .bordas {
-        border-left: 1px solid #979797;
-        padding: 3px;
-    }
-    .form {
-        margin: 3% 3%;
-        border-radius: 5px;
-        border: rgba(0, 0, 0, 0.678) solid 0.1px;
-        width: 45%;
-        margin-top: 3%;
-        padding-top: 8%;
-    
-    }
-    .new {
-        display: block; 
-        font-size: 16px;     /* titulo do formulario com block apenas na versão portrait acima */
-        text-align: center;
-        margin-top: -65px;
-    }
-    .transacao {
-        margin-top: -5px;
-        margin-left: 14px;
-    }
-    .mercadoria {
-        margin-left: 14px;
-    }
-    .valores {
-        margin-left: 14px;
-    }
-    .btn {
-        width: 97%;
-        margin: 18px;
-        margin-top: -2px;
-        margin-left: 10px;
-    }
-    .bar {
-        display: none;      /* barra aplicada com none, apenas disponivel na versão mobile */
-    }
-    .transactions {
-        margin-left: 48%;
-        width: 50%;
-        margin-top: -350px;
-    }
-    .values {
-        margin-top: 31px;
-        margin-right: -34px;
-        
-    }
-    .values3 {
-        margin-top: 25px;
-        margin-right: -95px;
-        
-    }
-    .values4 {
-        margin-top: 24px;
-        margin-right: 81px;
-    }
-    .text-transactions5 {
-        margin-right: 35px;
-    }
-    .lucro {
-        margin-right: 80px;
-    }
+      font-size: 16px;     /* titulo do formulario com block apenas na versão portrait acima */
+      text-align: center;
+      margin-top: -65px;
+  }
+  .transacao {
+      margin-top: -5px;
+      margin-left: 14px;
+  }
+  .mercadoria {
+      margin-left: 14px;
+  }
+  .valores {
+      margin-left: 14px;
+  }
+  .btn {
+      width: 97%;
+      margin: 18px;
+      margin-top: -2px;
+      margin-left: 10px;
+  }
+ .container_table {
+   width: 51%;
+   height: 41vh;
+   margin: 0px;
+   padding: 20px 0;
+   overflow: auto;
+   float: right;
+   margin-top: -389px; 
+  }
+  .bar {
+    display: none;
+  }
 
 }
