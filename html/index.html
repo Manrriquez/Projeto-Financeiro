@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="../Js/controll.js"></script>
+    <script type="text/javascript" src="../Js/script.js"></script>
 </head>
 
 <body>
     <div class="header">
        <div class="img">
-         <img src="../image/image.png" alt="logotipo">   <!-- Logotipo -->
+         <img src="../img/image.png" alt="logotipo">   <!-- Logotipo -->
        </div>
 
        <div class="title">
@@ -22,33 +22,23 @@
        </div>
        <div class="menu-icon">
            <div class="hamburguer-icon">
-              <div></div>
-              <div></div>                          <!-- Menu Hamburguer -->
-              <div></div>
+                <img id="hamburguer-icon" src="../img/icon-hamburguer.png" alt="">
            </div>
              <div class="menu-list">
-                 <ul>
-                     <li class="exit">X</li>
-                     <li>Cadastro de Transações</li>       <!-- Primeiro menu options, apenas disponivel para versão mobile -->
-                      <li>Limpar Dados</li> 
-                      <li>Salvar no Servidor</li>
+                 <ul class="fundo_menu">
+                     <li class="exit"> X</li>
+                     <li onclick="cadastro()">Cadastro de Transações</li>       <!-- Primeiro menu options, apenas disponivel para versão mobile -->
+                      <span class="bordas"></span>
+                     <li onclick="deletarTransacoes()">Limpar Dados</li> 
+                     <span class="bordas"></span>
+                     <li onclick="create()">Salvar no Servidor</li>
                  </ul>
             </div>
-       </div>
-
-       <div class="menu-itens">
-          <ul>
-              <li>Cadastro de Transações</li>
-              <span class="bordas"></span>
-              <li>Limpar Dados</li>                  <!-- Segundo menu options, apenas disponivel para versão landscape e desktop -->
-              <span class="bordas"></span> 
-              <li>Salvar no Servidor</li>
-          </ul>
        </div>
    </div>
 
 
-   <div class="form">
+   <form class="form" onsubmit="validarCampo(event);"> 
        <div class="new">
             <h3>
                 Nova Transação               <!-- Segundo titulo, apenas disponivel na versão tablet acima-->
@@ -58,76 +48,74 @@
            <div class="text">
                Tipo de Transações
            </div class= "options">                   <!-- Opções de transação -->
-             <select name="option">                          
-                 <option value="1">Compra</option>
-                 <option value="2">Venda</option>
+             <select name="option" id="option" onclick="validacaoTipo.innerHTML = ''">    
+                <option value="">Selecione</option>                      
+                 <option value="compra">Compra</option>
+                 <option value="venda">Venda</option>
              </select>
+             <div id="validacaoTipo" class="validacao"></div>
            </div>
 
        <div class="mercadoria">
           <div class="text">
              Nome da Mercadoria                  <!-- Nome de mercadorias -->
           </div>
-          <input type="text" placeholder="input">
+          <input type="text" id="mercadoria" placeholder="Nome" onkeypress="validacaoMercadoria.innerHTML = ''">
+         <div id="validacaoMercadoria" class="validacao"></div>
        </div>
 
        <div class="valores">
            <div class="text">
                Valor                                     <!-- Valores da mercadoria-->
            </div>
-           <input type="number" placeholder="R$0,00">
+           <input id="valor" type="text" placeholder="R$0,00" onkeyup="ConversaoMoeda(this);" onkeypress="validacaoValor.innerHTML = ''">
+           <div id="validacaoValor" class="validacao"></div>
        </div>
 
        <div class="btn">
-          <button>Adicionar Transições</button>           <!-- Botão -->
+          <button id="button_transacoes">Adicionar Transações</button>           <!-- Botão -->
        </div>
-   </div>
+    </form>
 
    <div class="bar">        
        <div></div>                             <!-- Barra feita separadamente -->
    </div> 
 
-   <div class="transactions">             
-        <div class="section-title">                      
-            <h1>Extrato de Transações</h1>             <!-- Titulo -->
-        </div>
-        <div>
-            <h1 class="lado1">Mercadoria</h1>
-            <h1 class="lado2">Valor</h1>                    <!-- Mercadoria e valores -->
-        </div>
-        <div class="bar1"> 
-            <div></div>                               <!-- Segunda barra feita separadamente -->
-        </div>
-        <div class="text-transactions">
-          + <p class="goods">Lorem ipsum, dolor sit amet <br>    <!-- Mercadoria -->
-                 consectetur </p>
-            <p class="values">R$:12,999,99</p>  <!-- Valor -->
-        </div>
-        <div class="bar2">
-            <div></div>                              <!-- Terceira barra feita separadamente -->
-        </div>
-        <div class="text-transactions3">
-          - <p class="goods3">Quis nostrud exercitation</p> <!-- Mercadoria-->
-           
-           <p class="values3">R$ 99,99</p> <!-- Valor -->
-        </div>
-        <div class="bar3"> 
-            <div></div>                         <!-- Quarta barra feita separadamente-->
-        </div>
-        <div class="text-transactions4">
-           + <p class="goods4">Lorem ipsum</p>          <!-- Mercadoria -->
-            <p class="values4">R$ 9,99</p>   <!-- Valor-->
-        </div>
-        <div class="bar4">
-            <div></div>
-            <div></div>                                   <!-- Quinta barra feita separadamente-->
-        </div>
-        <div class="text-transactions5">
-            <h3 class="lado3">Total</h3>    <!-- Total dos valores somados-->
-            <h3 class="lado4">R$ 12.909,99</h3>  <!-- valores somados -->
-        </div>
-        <p class="lucro">[LUCRO]</p>   
-   </div>
-   
+   <div class="container_table">
+      <table id="tabela">
+          <p>Extrato de transações</p>
+          <tr>
+              <th></th>
+              <th class="left weight">Mercadoria</th>
+              <th class="right weight">Valor</th>
+          </tr>
+          <tr>
+              <td colspan="3" class="border"></td>
+          </tr>
+          <tbody id="content-table">
+              <tr>
+                  <td colspan="3">
+                      Nenhuma transação cadastrada.
+                  </td>
+              </tr>
+          </tbody>
+          <tr></tr>
+          <tr>
+              <td colspan="3" class="border_bottom"></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td class="left weight">Total</td>
+              <td class="right weight" id="campoTotal"></td>
+          </tr>
+          <tr>
+              <td class="right small" colspan="3" id="campoLucro"></td>
+          </tr>
+      </table>
+  </div>
+
+   <script>
+        listarTransacoes()
+    </script>
 </body>
 </html>
